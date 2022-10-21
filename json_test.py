@@ -24,6 +24,12 @@ height = {'height': 180}
 python_dict.update(height)
 print("new python dict = ",python_dict)   # new python dict =  {'name': 'myname', 'age': 100, 'height': 180}
 
+#json.dump() 和 json.load() 用于处理文件
+with open('test.json', 'r') as f:
+    json.load(f)                         # read file, json string to python dict 
 
+data = python_dict
+with open('test.json', 'w') as f:
+    json.dump(data, f)                   # python dict to json string, write file
 
 
